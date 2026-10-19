@@ -1,82 +1,47 @@
-/* PROFILE PICTURE STYLEING */
+.site-header {
+  background-color: var(--primary);
+  border-bottom: 3px solid var(--accent);
+  z-index: 10;
+}
 
-#profile-image-boreder {
+.profile-image {
+  width: 96px;
+  height: 96px;
+  object-fit: 75% 25%;
+}
+
+@media (min-width: 768px) {
+  .profile-image {
     width: 150px;
     height: 150px;
-    border-radius: 50%;
-    overflow: hidden;
-
-    img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-
-        object-position: 75% 25%;
-    }
+  }
 }
 
-/* LINK STYLE */
-
-.page-link {
-    display: inline-block;
-    padding: 0.75rem 1.5rem;
-
-    font-weight: bolder;
-    font-size: clamp(1rem, 1vw + 0.75rem, 1.25rem);
-    text-decoration: none;
-    
-    color: var(--text-base-light);
-    
-    background-color: transparent;
-    
-    border: 2px solid var(--secondary);
-    border-radius: 0.5rem;
-    
-    transition: 
-        color 0.2s ease, 
-        background-color 0.2s ease, 
-        border-color 0.2s ease;
-
-    &:hover {
-        color: var(--primary);
-        background-color: var(--secondary);
-    }
-
-    &:active {
-        background-color: var(--accent);
-        border-color: var(--accent);
-        color: var(--text-base-light);
-    }
-    &:focus-visible {
-        outline: 2px solid var(--accent);
-        outline-offset: 4px;
-    }
+.site-link {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  font-weight: bolder;
+  font-size: clamp(1rem, 1vw + 0.75rem, 1.25rem);
+  text-decoration: none;
+  color: var(--text-base-light);
+  border: 2px solid var(--secondary);
+  border-radius: 0.5rem;
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease;
 }
 
-header {
-    background-color: var(--primary);
-    border-bottom: 3px solid var(--accent);
-    position: sticky;
-    top: 0;
-    z-index: 10;
+.site-link:hover {
+  color: var(--primary);
+  background-color: var(--secondary);
 }
-
-/* NAVIGATION BAR STYELING */
-
-#nav-bar {
-    display: flex;
-    padding: 1rem;
-    padding-bottom: 1rem;
-
-    justify-content: space-between;
-
-    #nav-link {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-        flex: 1;
-        list-style: none;
-    }
+.site-link:active {
+  color: var(--text-base-light);
+  background-color: var(--accent);
+  border-color: var(--accent);
 }
-
-
+.site-link:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}

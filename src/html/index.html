@@ -12,177 +12,130 @@
     <!-- FONT WEIGTH -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet"/>
+    
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
 
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/nav-style.css" />
-    <link rel="stylesheet" href="../css/layout-style.css" />
     <link rel="stylesheet" href="../css/section-style.css" />
-    <link rel="stylesheet" href="../css/contact-form-style.css">
-    <link rel="stylesheet" href="../css/footer-style.css">
-    <link rel="stylesheet" href="../css/intressed-table-style.css">
-    <link rel="stylesheet" href="../css/personal-picture-style.css">
-    <link rel="stylesheet" href="../css/responsive-style-layout.css">
+    <link rel="stylesheet" href="../css/footer-style.css" />
 
   </head>
 
   <body>
-    <header>
-      <nav id="nav-bar">
-        <ul id="nav-link">
-          <li><a href="#about-me-container" class="page-link">About Me</a></li>
-          <li>
-            <a href="#intresests-container" class="page-link">Interests</a>
-          </li>
-          <li><a href="#goal-container" class="page-link">Goal</a></li>
-          <li><a href="#contact-forum-container" class="page-link">Contact Me</a></li>
-        </ul>
 
-        <div id="profile-image-boreder">
-          <img
-            src="../img/IMG_2744.JPG"
-            alt="David Jansson"
-            width="150"
-            height="150"
-          />
-        </div>
+    <header class="site-header sticky-md-top">
+      <nav class="container-fluid d-flex flex-column-reverse flex-md-row justify-content-between align-items-center gap-3 p-3" aria-label="Main">
+        <ul class="nav flex-wrap jusify-content-center gap-2">
+          <li><a href="#about-me-container" class="site-link">About Me</a></li>
+          <li><a href="#intresests-container" class="site-link">Interests</a></li>
+          <li><a href="#goal-container" class="site-link">Goal</a></li>
+          <li><a href="#contact-forum-container" class="site-link">Contact Me</a></li>
+        </ul>
+        
+        <img src="../img/IMG_2744.JPG" alt="David Jansson" width="150" height="150" class="profile-image rounded-circle object-fit-cover" />
       </nav>
     </header>
 
-    <main>
-      <section id="about-me-container">
-        <h1 class="section-header">About Me</h1>
 
-        <details class="question-style">
-          <summary>Introduction to programming</summary>
-          <p> I got introduced to programming in 3:e grade in middle school with the program Scratch where I learned the basic of game prorgramming </p>
-        </details>
+    <main class="container py-4 flex-grow-1">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 d-grid gap-4">
+
+          <section id="about-me-container" class="card card-body p-4 shadow-sm">
+            <h1 class="section-header mb-3">About Me</h1>
+
+            <details class="question-style">
+              <summary>Introduction to programming</summary>
+              <p> I got introduced to programming in 3:e grade in middle school with the program Scratch where I learned the basic of game prorgramming </p>
+            </details>
         
-        <details class="question-style">
-          <summary>Core memory</summary>
-          <p>The core most core memory I have is when me and my dad plays a video game called Anno 1405 on his computer</p>
-        </details>
+            <details class="question-style">
+              <summary>Core memory</summary>
+              <p>The core most core memory I have is when me and my dad plays a video game called Anno 1405 on his computer</p>
+            </details>
 
-        <details class="question-style">
-          <summary>What have infuldence me with programming</summary>
-          <p>
-            A lot of the infludence of the programming I have done can be summed up in a sentence of <span class="italic">"<span>How can I make this game more intressing</span>"</span>. Under my school time I programmed from tutorials and wanted to learn even the closest things, this also transplated over to me when I started to play video games. I untill today can't just be statified by not knowing the ins and outs of a mechanic that I found to be fun. 
-          </p>
-        </details>
-      </section>
+            <details class="question-style">
+              <summary>What have infuldence me with programming</summary>
+              <p>A lot of the infludence of the programming I have done can be summed up in a sentence of <span class="fst-italic">"How can I make this game more intressing"</span>. Under my school time I programmed from tutorials and wanted to learn even the closest things, this also transplated over to me when I started to play video games. I untill today can't just be statified by not knowing the ins and outs of a mechanic that I found to be fun. </p>  
+            </details>
+          </section>
 
-      <section id="intresests-container">
-        <h2 class="section-header">Interests</h2>
-        <table class="interests-table">
-          <thead>
-            <tr>
-              <th>Interest</th>
-              <th>How long</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Programming</td>
-              <td>10 years</td>
-            </tr>
-            <tr>
-              <td>Gaming</td>
-              <td>12 years</td>
-            </tr>
-            <tr>
-              <td>Take pictures</td>
-              <td>2 years</td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
-      
-      <section id="personal-picture-container">
-        <h2 class="section-header">Personal pictures</h2>
-        <div>
-          <img 
-            src="../img/P1010174.jpg" 
-            alt="Personal picture 1"
-          >
-          <img 
-            src="../img/P1010218.jpg" 
-            alt="Personal picture 2"
-          >
+          <section id="intresests-container" class="card card-body p-4 shadow-sm">
+            <h2 class="section-header mb-3">Interests</h2>
+            <table class="table table-hover mb-0">
+              <thead>
+                <tr><th scope="col">Interest</th><th scope="col">How long</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Programming</td><td>10 years</td></tr>
+                <tr><td>Gaming</td><td>12 years</td></tr>
+                <tr><td>Take pictures</td><td>2 years</td></tr>
+              </tbody>
+            </table>
+          </section>
+          
+          <section id="personal-picture-container" class="card card-body p-4 shadow-sm">
+            <h2 class="section-header mb-3">Personal pictures</h2>
+            
+            <div class="row g-3 jusify-content-center">
+              <div class="col-12 col-sm-6">
+                <img src="../img/P1010174.jpg" alt="Personal picture 1" width="400" height="400" class="personal-picture img-fluid w-100 rounded-4 object-fit-cover">
+              </div>
+              <div class="col-12 col-sm-6">
+                <img src="../img/P1010218.jpg" alt="Personal picture 2" width="400" height="400" class="personal-picture img-fluid w-100 rounded-4 object-fit-cover">
+              </div>
+          </section>
+
+          <section id="goal-container" class="card card-body p-4 shadow-sm">
+            <h2 class="section-header mb-3">Goal</h2>
+
+            <details class="question-style">
+              <summary>What is my long term goal?</summary>
+              <p>My long term goal is to be programming system design for a game</p>
+            </details>
+
+            <details class="question-style">
+              <summary>Why is the goal important for me?</summary>
+              <p>This is important for me becuase I have always wanted to be available to work on a game and create a game. I myself have even a idee of a game I want to make in the future</p>
+            </details>
+
+            <details class="question-style">
+              <summary>What is the reason you want to achieve it?</summary>
+              <p>I want to achieve this becuase its a dream of mine and something im passtion about</p>
+            </details>
+          </section>
+
+          <section id="contact-forum-container" class="card card-body p-4 shadow-sm">
+            <h2 class="section-header mb-3">Contact Me</h2>
+
+            <form action="#" method="POST">
+              <div class="mb-3">
+                <label for="name" class="form-label fw-bold">Full Name</label><br/>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Place your name here" autocomplete="name" required/>
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label fw-bold">Email Address</label><br />
+                <input type="email" class="form-control" id="email" name="email" placeholder="you@example.com" required/>
+              </div>
+              <div id="message-input">
+                <label for="message" class="form-label fw-bold">Message</label><br />
+                <textarea class="form-control" id="message" rows="5" name="message" placeholder="Type your message..." maxlength="200" required ></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary px-4">Submit</button>
+            </form>
+          </section>
+
         </div>
-      </section>
-
-      <section id="goal-container">
-        <h2 class="section-header">Goal</h2>
-
-        <details class="question-style">
-          <summary>What is my long term goal?</summary>
-          <p>My long term goal is to be programming system design for a game</p>
-        </details>
-
-        <details class="question-style">
-          <summary>Why is the goal important for me?</summary>
-          <p>This is important for me becuase I have always wanted to be available to work on a game and create a game. I myself have even a idee of a game I want to make in the future</p>
-        </details>
-
-        <details class="question-style">
-          <summary>What is the reason you want to achieve it?</summary>
-          <p>I want to achieve this becuase its a dream of mine and something im passtion about</p>
-        </details>
-      </section>
-
-      <section id="contact-forum-container">
-        <h2 class="section-header">Contact Me</h2>
-        <form action="#" method="POST">
-          <div id="name-input">
-            <label for="name">Full Name</label><br/>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              placeholder="John Doe"
-              required
-            />
-          </div>
-          <div id="email-input">
-            <label for="email">Email Address</label><br />
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="you@example.com"
-              required
-            />
-          </div>
-          <div id="message-input">
-            <label for="message">Message</label><br />
-            <textarea
-              id="message"
-              name="message"
-              placeholder="Type your message..."
-              maxlength="200"
-              required
-            ></textarea>
-          </div>
-          <button type="submit">Submit</button>
-        </form>
-      </section>
+      </div>
     </main>
 
-    <footer>
-      <p>© 2026 David Jansson</p>
-      <ul id="footer-links">
-        <li>
-          <a href="https://github.com/DavidJanssonDev" class="footer-link" target="_blank" rel="noopener noreferrer">GitHub<a>
-        </li>
-        <li>
-           <a href="mailto:david.m.jansson@gmail.com" class="footer-link">Email</a>
-        </li>
-        <li>
-           <p>Seed tag: <span id="seed-name">Willow</span></p>
-        </li>
+    <footer class="site-footer py-4 px-3 px-md-4">
+      <ul class="list-unstyled d-flex flex-wrap align-items-center gap-3 mb-0">
+        <li><a href="https://github.com/DavidJanssonDev" class="footer-link" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        <li><a href="mailto:david.m.jansson@gmail.com" class="footer-link">Email</a></li>
       </ul>
     </footer>
   </body>

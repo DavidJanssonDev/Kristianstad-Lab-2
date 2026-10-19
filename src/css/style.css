@@ -1,34 +1,79 @@
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: "Inter", system-ui, sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", system-ui, sans-serif;
 }
 
 :root {
   --text-base-dark: #080a0c;
   --text-base-light: #f3f5f7;
-
   --text-hover-light: #185286;
   --text-hover-dark: #171d23;
 
   --background: #11303f;
   --primary: #09253e;
   --secondary: #99b7d1;
-
   --accent: #d9822b;
   --border: #dbe2e8;
   --text-muted: #5c6b7a;
   --surface: #ffffff;
-
   --seed-color: #f3ae7c;
 
-
-  --header-height: 190px;
+  --bs-body-font-family: "Inter", system-ui, sans-serif;
+  --bs-body-color: var(--text-base-dark);
+  --bs-border-color: var(--border);
 }
 
-body {
-  color: var(--text-base-dark);
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 1rem;
+}
+@media (min-width: 768px) {
+  html {
+    scroll-padding-top: 12rem;
+  }
+}
+
+.card {
+  --bs-card-border-color: var(--border);
+  --bs-card-border-radius: 0.75rem;
+  --bs-card-bg: var(--surface);
+}
+
+.section-header {
+  font-size: clamp(1.75rem, 2vw + 1.25rem, 2.5rem);
+  color: var(--primary);
+}
+
+.btn-primary {
+  --bs-btn-bg: var(--primary);
+  --bs-btn-border-color: var(--primary);
+  --bs-btn-hover-bg: var(--accent);
+  --bs-btn-hover-border-color: var(--accent);
+  --bs-btn-active-bg: var(--accent);
+  --bs-btn-active-border-color: var(--accent);
+  --bs-btn-focus-shadow-rgb: 217, 130, 43;
+}
+
+.form-control {
+  background-color: var(--text-base-light);
+  border-radius: 0.5rem;
+}
+.form-control:focus {
+  border-color: var(--secondary);
+  box-shadow: 0 0 0 3px rgb(153 183 209 / 35%);
+}
+
+.table th {
+  color: var(--primary);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.personal-pic {
+  aspect-ratio: 1;
 }
