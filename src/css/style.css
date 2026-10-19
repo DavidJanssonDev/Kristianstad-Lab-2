@@ -1,0 +1,34 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", system-ui, sans-serif;
+}
+
+:root {
+  --text-base-dark: #080a0c;
+  --text-base-light: #f3f5f7;
+
+  --text-hover-light: #185286;
+  --text-hover-dark: #171d23;
+
+  --background: #11303f;
+  --primary: #09253e;
+  --secondary: #99b7d1;
+
+  --accent: #d9822b;
+  --border: #dbe2e8;
+  --text-muted: #5c6b7a;
+  --surface: #ffffff;
+
+  --seed-color: #f3ae7c;
+
+
+  --header-height: 190px;
+}
+
+body {
+  color: var(--text-base-dark);
+}

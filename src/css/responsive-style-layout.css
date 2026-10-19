@@ -1,0 +1,94 @@
+/* All sizes: let grid children shrink instead of stretching the page sideways */
+main > section {
+    min-width: 0;
+}
+ 
+/* Pictures: were fixed at 400x400 and never wrapped, which overflows a phone */
+#personal-picture-container > div {
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+ 
+#personal-picture-container > div img {
+    width: min(100%, 400px);
+    height: auto;
+    aspect-ratio: 1;
+    object-fit: cover;
+}
+ 
+/* Phones and small tablets */
+@media (max-width: 768px) {
+ 
+    /* Page grid: one column instead of six */
+    body {
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-areas:
+            "header-container"
+            "main-container"
+            "footer-container";
+    }
+ 
+    main {
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-areas:
+            "about-me-container"
+            "intresests-container"
+            "personal-picture"
+            "goal-container"
+            "contact-forum";
+        padding: 1rem;
+        row-gap: 1rem;
+    }
+ 
+    main > section {
+        padding: 1.25rem;
+    }
+ 
+    /* Header: no longer sticky, image on top, links wrap underneath */
+    html {
+        scroll-padding-top: 1rem;
+    }
+ 
+    header {
+        position: static;
+        min-height: 0;
+    }
+ 
+    #nav-bar {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 1rem;
+    }
+ 
+    #nav-bar #nav-link {
+        flex: none;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+ 
+    .page-link {
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+    }
+ 
+    #profile-image-boreder {
+        width: 96px;
+        height: 96px;
+    }
+ 
+    /* Smaller spacing elsewhere */
+    #contact-forum-container {
+        min-height: 0;
+    }
+ 
+    .interests-table th,
+    .interests-table td {
+        padding: 0.6rem 0.5rem;
+    }
+ 
+    footer {
+        padding: 1.25rem 1rem;
+    }
+}
+ 

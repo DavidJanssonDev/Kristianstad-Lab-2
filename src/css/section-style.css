@@ -1,0 +1,64 @@
+/* SECTION LAYOUT — each section is a "card" */
+
+main > section {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 0.75rem;
+    box-shadow: 0 1px 3px rgba(8, 10, 12, 0.08);
+    padding: 2rem;
+}
+
+.section-header {
+    font-size: clamp(1.75rem, 2vw + 1.25rem, 2.5rem);
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+/* QUESTION / DETAILS STYLING — list-style items inside the card */
+
+.question-style {
+    border: none;
+    border-bottom: 1px solid var(--border);
+    border-radius: 0;
+    padding: 1rem 0;
+    margin-bottom: 0;
+
+    &:last-of-type {
+        border-bottom: none;
+    }
+
+    summary {
+        cursor: pointer;
+        font-weight: bold;
+        color: var(--text-base-dark);
+        list-style: none;
+
+        &::marker,
+        &::-webkit-details-marker {
+            display: none;
+        }
+
+        &::before {
+            content: "▸";
+            display: inline-block;
+            margin-right: 0.5rem;
+            color: var(--accent);
+            transition: transform 0.2s ease;
+        }
+    }
+
+    &[open] summary::before {
+        transform: rotate(90deg);
+    }
+
+    p {
+        margin-top: 0.75rem;
+        color: var(--text-muted);
+        line-height: 1.6;
+    }
+
+    &:focus-within {
+        outline: 2px solid var(--secondary);
+        outline-offset: 2px;
+    }
+}
