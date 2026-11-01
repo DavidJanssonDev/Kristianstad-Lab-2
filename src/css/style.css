@@ -38,3 +38,35 @@
 .personal-pic {
   aspect-ratio: 1;
 }
+
+.comments-wrapper {
+  position: relative;
+}
+
+/* room at the bottom so typed text never runs under the counter */
+.comments-wrapper textarea {
+  padding-bottom: 2rem;
+}
+
+.comments-counter {
+  position: absolute;
+  right: 0.75rem;
+  bottom: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  pointer-events: none; /* clicks go through to the textarea */
+}
+
+/* darker tones */
+.comments-counter.counter-short {
+  color: #842029; /* dark red */
+}
+.comments-counter.counter-met {
+  color: #0f5132; /* dark green */
+}
+
+/* The error div is no longer a direct sibling of the textarea, so Bootstrap's
+   own rule can't show it. This does the same job. */
+.comments-wrapper:has(.is-invalid) + .invalid-feedback {
+  display: block;
+}

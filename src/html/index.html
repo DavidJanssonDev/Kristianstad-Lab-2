@@ -117,7 +117,7 @@
             
             <form id="feedback-form" novalidate>
               <div class="row g-3">
-                
+
                 <div class="col-md-6">
                   <label for="fb-name" class="form-label fw-bold">Full Name</label>
                   <input type="text" class="form-control" id="fb-name" name="name"
@@ -149,11 +149,13 @@
 
                 <div class="col-12">
                   <label for="fb-comments" class="form-label fw-bold">Comments</label>
-                  <textarea class="form-control" id="fb-comments" name="comments" rows="5"
-                    placeholder="Share your thoughts..."
-                    aria-describedby="fb-comments-error fb-comments-counter" required></textarea>
+                  <div class="comments-wrapper">
+                    <textarea class="form-control" id="fb-comments" name="comments" rows="5"
+                      placeholder="Share your thoughts..."
+                      aria-describedby="fb-comments-error fb-comments-counter" required></textarea>
+                    <span id="fb-comments-counter" class="comments-counter"></span>
+                  </div>
                   <div id="fb-comments-error" class="invalid-feedback"></div>
-                  <div id="fb-comments-counter" class="form-text"></div>
                 </div>
 
                 <div class="col-12">
