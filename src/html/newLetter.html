@@ -24,21 +24,29 @@
       crossorigin="anonymous"
     />
 
+    <!-- SYTLE SHEETS -->
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/nav-style.css" />
-    <link rel="stylesheet" href="../css/section-style.css" />
     <link rel="stylesheet" href="../css/footer-style.css" />
+    <link rel="stylesheet" href="../css/gerneral-style.css" />
   </head>
 
-  <body>
+  <body class="d-flex flex-column min-vh-100">
     <header class="site-header sticky-md-top">
       <nav
         class="container-fluid d-flex flex-column-reverse flex-md-row justify-content-between align-items-center gap-3 p-3"
         aria-label="Main"
       >
-        <ul class="nav flex-wrap jusify-content-center gap-2">
+        <ul class="nav flex-wrap justify-content-center gap-2">
           <li><a href="index.html" class="site-link">Back</a></li>
-          <li><a href="#" class="site-link">News Letter</a></li>
+          <li>
+            <a href="newLetter.html#news-letters" class="site-link"
+              >News Letters</a
+            >
+          </li>
+          <li>
+            <a href="newletterForum.html" class="site-link">Add News letter</a>
+          </li>
         </ul>
         <img
           src="../img/IMG_2744.JPG"
@@ -49,5 +57,39 @@
         />
       </nav>
     </header>
+
+    <main class="container py-4 flex-grow-1">
+      <div class="row justify-content-center">
+        <section
+          id="news-letters"
+          class="col-lg-8 d-grid gap-4"
+          aria-label="News letters"
+        >
+          <p id="news-count" class="text-muted mb-0"></p>
+          <div id="news-list" class="d-grid gap-4"></div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer py-4 px-3 px-md-4">
+      <ul class="list-unstyled d-flex flex-wrap align-items-center gap-3 mb-0">
+        <li>
+          <a
+            href="https://github.com/DavidJanssonDev"
+            class="footer-link"
+            target="_blank"
+            rel="noopener noreferrer"
+            >GitHub</a
+          >
+        </li>
+        <li>
+          <a href="mailto:david.m.jansson@gmail.com" class="footer-link"
+            >Email</a
+          >
+        </li>
+      </ul>
+    </footer>
+
+    <script type="module" src="../js/newLetter.js"></script>
   </body>
 </html>
