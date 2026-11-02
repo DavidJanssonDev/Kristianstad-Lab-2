@@ -12,8 +12,8 @@ const SUCCESS_DURATION_MS = 4000;
 const NAME_PATTERN = /^[\p{L}\p{M}][\p{L}\p{M}\s'’-]*$/u;
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
-let statusTimer;
 
+let statusTimer;
 
 // ---------- HELPERS ----------
 
@@ -118,10 +118,10 @@ function validateWebsite() {
     if (inputWebsite === null) return;
 
     if (inputWebsite.value.trim() === "") {
-        clearFieldError(inputWebsite); // optional and empty: no state at all
+        clearFieldError(inputWebsite); 
         return true;
     }
-    if (!inputWebsite.checkValidity()) { // browser's own URL validation
+    if (!inputWebsite.checkValidity()) { 
         showFieldError(inputWebsite, "Please enter a full URL, like https://www.example.com.");
         return false;
     }
@@ -144,17 +144,30 @@ function updateCounter() {
   inputCounter.classList.toggle("counter-short", !reached);
 }
 
-// ---------- Reset to the complete initial state ----------
+// ---------- Status message ----------
 
-function resetForm() {
-    for (const input of [fullName, email, topic, comments, website]) {
-        clearFieldError(input);
-    }
-    updateCounter();
-    clearStatus();
+function showStatus(message) {
+  inputStatus.textContent = message;
+  inputStatus.className = "alert alert-success mt-3";
+  clearTimeout(statusTimer);
+  statusTimer = setTimeout(clearStatus, SUCCESS_DURATION_MS);
+}
+
+function clearStatus() {
+  clearTimeout(statusTimer);
+  inputStatus.textContent = "";
+  inputStatus.className = "mt-3";
 }
 
 
+// ---------- Reset to the complete initial state ----------
+
+function resetForm() {
+    for (const input of [inputFullName, inputEmail, inputTopic, inputComments, inputWebsite]) {
+        clearFieldError(input);
+    }
+    updateCounter();
+}
 
 // ---------- Events ----------
 
@@ -195,7 +208,10 @@ formElement.addEventListener("submit", (event) => {
 });
 
 // Clear button: the browser empties the values AFTER this event, so wait a tick
-formElement.addEventListener("reset", () => setTimeout(resetForm, 0));
+formElement.addEventListener("reset", () => {
+   clearStatus()
+   setTimeout(resetForm, 0)
+});
 
 
 updateCounter();

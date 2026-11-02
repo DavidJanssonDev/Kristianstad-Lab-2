@@ -70,3 +70,7 @@
 .comments-wrapper:has(.is-invalid) + .invalid-feedback {
   display: block;
 }
+
+textarea {
+  resize: none;
+}
