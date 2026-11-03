@@ -7,7 +7,7 @@ A personal portfolio website about me, my interests and my goals as a software d
 ## Features
 
 - About me, interests, pictures and goals sections
-- Contact form
+- Newsletter list with a place to add newsletter
 - Feedback form with validation and a live character counter
 
 ## Getting started
